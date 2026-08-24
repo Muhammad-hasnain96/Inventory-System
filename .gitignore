@@ -1,0 +1,47 @@
+# Laravel
+/node_modules
+/vendor
+.env
+.env.local
+.env.*.local
+storage/
+bootstrap/cache/
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.code-workspace
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Misc
+.cache
+dist/
+build/
+.turbo/
+.env*.local
+.next/
+out/
+
+# npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+.coverage
+coverage/
+
+# Production
+composer.lock
+package-lock.json
+yarn.lock

@@ -1,0 +1,15 @@
+node_modules
+vendor
+dist
+.dockerignore
+.git
+.gitignore
+npm-debug.log
+yarn-error.log
+.env
+storage/*.key
+storage/framework/cache/data
+storage/logs
+storage/debugbar
+storage/app/public
+public/storage

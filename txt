@@ -1,0 +1,11 @@
+Super Admin:
+  Email: admin@inventory.local
+  Password: password123
+
+Branch Manager:
+  Email: john@inventory.local
+  Password: password123
+
+Sales User:
+  Email: alice@inventory.local
+  Password: password123

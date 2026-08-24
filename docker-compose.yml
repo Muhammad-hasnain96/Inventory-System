@@ -1,0 +1,41 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: inventory_app
+    ports:
+      - '8000:80'
+    depends_on:
+      - db
+    environment:
+      APP_ENV: production
+      APP_DEBUG: 'false'
+      APP_URL: http://localhost:8000
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_DATABASE: inventory_system
+      DB_USERNAME: root
+      DB_PASSWORD: secret
+      CACHE_DRIVER: file
+      SESSION_DRIVER: file
+      FILESYSTEM_DISK: local
+      SANCTUM_STATEFUL_DOMAINS: localhost
+      SESSION_DOMAIN: localhost
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.1
+    container_name: inventory_db
+    ports:
+      - '3307:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: inventory_system
+    volumes:
+      - dbdata:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  dbdata:
